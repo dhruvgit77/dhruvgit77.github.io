@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second Brain</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+         max-width: 46rem; margin: 0 auto; padding: 3rem 1.5rem; line-height: 1.65; }
+  h1 { margin-bottom: .25rem; }
+  .sub { color: #666; margin-top: 0; }
+  h2 { margin-top: 2.5rem; }
+  code { background: rgba(127,127,127,.15); padding: .1em .35em; border-radius: 3px; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(127,127,127,.3);
+           font-size: .9rem; color: #666; }
+</style>
+</head>
+<body>
+<h1>Second Brain</h1>
+<p class="sub">A personal, local-first knowledge assistant.</p>
+
+<h2>What it does</h2>
+<p>
+  Second Brain is a single-user personal productivity tool. It runs entirely on its
+  owner's own computer and helps them keep track of their own email, calendar,
+  tasks, and files by organising that information into a local folder of Markdown
+  notes that they can read and edit themselves.
+</p>
+
+<h2>How it uses Google services</h2>
+<ul>
+  <li><strong>Gmail (read-only)</strong> — reads the user's own messages to identify
+      which ones may need a reply, and to summarise what arrived while they were away.</li>
+  <li><strong>Gmail (compose)</strong> — saves <em>draft</em> replies to the user's own
+      Gmail drafts folder for them to review. The application cannot send email: the
+      <code>gmail.send</code> permission is deliberately not requested.</li>
+  <li><strong>Google Calendar (read-only)</strong> — reads upcoming events so the user
+      can be reminded about them.</li>
+  <li><strong>Google Tasks (read-only)</strong> — reads task due dates to surface
+      approaching and overdue deadlines.</li>
+  <li><strong>Google Drive (metadata only)</strong> — reads file names and modification
+      times to show recently changed documents. File contents are never accessed.</li>
+</ul>
+
+<h2>Where the data goes</h2>
+<p>
+  Nowhere. All processing happens on the user's own machine. There is no server, no
+  database, no analytics, and no third party. The application is used by one person:
+  its author.
+</p>
+
+<h2>Source</h2>
+<p>
+  Second Brain is a personal project built with the Claude Agent SDK, Python, and
+  SQLite. It is not a commercial product and is not offered to other users.
+</p>
+
+<footer>
+  <p><a href="privacy.html">Privacy Policy</a></p>
+  <p>Maintained by Dhruv Singhal.</p>
+</footer>
+</body>
+</html>

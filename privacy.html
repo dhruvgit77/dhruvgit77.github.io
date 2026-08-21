@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Second Brain</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+         max-width: 46rem; margin: 0 auto; padding: 3rem 1.5rem; line-height: 1.65; }
+  h1 { margin-bottom: .25rem; }
+  .sub { color: #666; margin-top: 0; }
+  h2 { margin-top: 2.5rem; }
+  code { background: rgba(127,127,127,.15); padding: .1em .35em; border-radius: 3px; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(127,127,127,.3);
+           font-size: .9rem; color: #666; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p class="sub">Second Brain — last updated 21 August 2026</p>
+
+<h2>Summary</h2>
+<p>
+  Second Brain is a single-user application that runs on its owner's personal
+  computer. It accesses only that person's own Google account, with their explicit
+  consent, and stores everything locally. No data is transmitted to the developer or
+  to any third party, because there is no server to transmit it to.
+</p>
+
+<h2>What is accessed</h2>
+<table>
+  <tr><td><code>gmail.readonly</code></td><td>Message headers and snippets, to identify mail that may need a reply.</td></tr>
+  <tr><td><code>gmail.compose</code></td><td>Creating draft replies for the user to review. Sending is not possible.</td></tr>
+  <tr><td><code>calendar.readonly</code></td><td>Upcoming event titles and times, for reminders.</td></tr>
+  <tr><td><code>tasks.readonly</code></td><td>Task titles and due dates, to surface deadlines.</td></tr>
+  <tr><td><code>drive.metadata.readonly</code></td><td>File names and modification times only. File contents are never read.</td></tr>
+</table>
+
+<h2>How it is stored</h2>
+<p>
+  Summaries and notes are written to Markdown files in a folder on the user's own
+  computer. OAuth tokens are stored locally with restricted file permissions and are
+  excluded from version control. Nothing is uploaded anywhere.
+</p>
+
+<h2>How it is shared</h2>
+<p>
+  It is not. There is no analytics, no telemetry, no advertising, and no sale or
+  transfer of data. The application has exactly one user, who is also its developer.
+</p>
+
+<h2>Language models</h2>
+<p>
+  The application uses Anthropic's Claude models to summarise the user's own content
+  and to draft replies for their review. Content sent to that API is governed by
+  <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.
+  Credentials and access tokens are never included in those requests: they are held
+  by local Python code and never placed into a model prompt.
+</p>
+
+<h2>Retention and deletion</h2>
+<p>
+  All data lives in local files under the user's control and can be deleted by
+  deleting those files. Access can be revoked at any time from
+  <a href="https://myaccount.google.com/permissions">Google Account permissions</a>,
+  which immediately and permanently ends the application's access.
+</p>
+
+<h2>Limited Use disclosure</h2>
+<p>
+  Second Brain's use of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+  API Services User Data Policy</a>, including the Limited Use requirements.
+</p>
+
+<h2>Contact</h2>
+<p>Dhruv Singhal — dhruv.singhal1605@gmail.com</p>
+
+<footer><p><a href="index.html">← Second Brain</a></p></footer>
+</body>
+</html>
